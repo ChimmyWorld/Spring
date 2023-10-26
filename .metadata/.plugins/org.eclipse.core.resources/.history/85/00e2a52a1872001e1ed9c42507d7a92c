@@ -1,0 +1,18 @@
+package di;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+import beans.Toy;
+
+public class Ex02 {
+	public static void main(String[] args) {
+		GenericXmlApplicationContext gac
+			= new GenericXmlApplicationContext("classpath:appCtx.xml");
+		
+		Toy t1 = gac.getBean(Toy.class); 		 // 지정 클래스와 동일한 객체를 꺼내준다
+		Toy t2 = gac.getBean("toy", Toy.class);  // 만약 동일한 클래스가 여럿이면 id로 구별 가능
+		
+		System.out.println("t1 = " + t1);
+		System.out.println("t2 = " + t2);		
+	}
+}

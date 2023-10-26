@@ -1,0 +1,9 @@
+package beans;
+
+public class Toy {
+	private Battery bat;
+	
+	public void run() {
+		System.out.println("장난감이 움직입니다~");
+	}
+}

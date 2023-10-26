@@ -1,0 +1,20 @@
+package di;
+
+import beans.Battery;
+import beans.Toy;
+
+public class Ex01 {
+	public static void main(String[] args) {
+		Battery bat = new Battery();
+		
+		Toy t1 = new Toy();
+		t1.setBat(bat);
+		t1.run();
+		
+		Toy t2 = new Toy();
+		t2.run();
+		
+		System.out.println("t1 = " + t1);
+		System.out.println("t2 = " + t2);
+	}
+}

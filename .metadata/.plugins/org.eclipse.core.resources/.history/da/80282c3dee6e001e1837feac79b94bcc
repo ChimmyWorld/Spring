@@ -1,0 +1,41 @@
+package com.itbank.Day68;
+
+import java.util.Map;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class Ex01Controller {
+	
+	@GetMapping("/ex01")
+	public void ex01() {}
+	
+	@PostMapping
+	public ModelAndView ex01(String name, int age) {
+		ModelAndView mav = new ModelAndView();
+		
+		String msg = name + "님은 ";
+		msg += age >= 19 ? "성인" : "미성년자";
+		msg += "입니다";
+		
+		mav.addObject("msg", msg);
+		mav.setViewName("/ex01");
+		
+		return mav;
+	}
+	
+	@GetMapping("/ex02")
+	public void ex02() {}
+	
+	@PostMapping("/ex02")
+	public ModelAndView ex02(@RequestParam Map<String, Object> data) {
+		
+		System.out.println(data.get("name"));
+		System.out.println(data.get("age"));
+		return null;
+	}
+}

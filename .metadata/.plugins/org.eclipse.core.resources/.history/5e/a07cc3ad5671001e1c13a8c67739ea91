@@ -1,0 +1,11 @@
+@charset "UTF-8";
+a {
+	color: inherit;
+}
+.board {
+	border-collapse: collapse;
+}
+.board th, .board td {
+	border: 1px solid #aaaaaa;
+	padding: 5px 10px;
+}

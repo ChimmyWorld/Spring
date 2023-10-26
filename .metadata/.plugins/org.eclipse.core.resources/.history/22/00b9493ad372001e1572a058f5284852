@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.board {
+	border-collapse: collapse;	
+}
+
+.board th, .board td {
+	border: 1px solid #aaaaaa;
+	padding: 5 10px;
+}

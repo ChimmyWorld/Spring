@@ -1,0 +1,11 @@
+package di;
+
+import beans.Toy;
+
+public class Ex01 {
+	public static void main(String[] args) {
+		Toy t1 = new Toy();
+		
+		t1.run();
+	}
+}

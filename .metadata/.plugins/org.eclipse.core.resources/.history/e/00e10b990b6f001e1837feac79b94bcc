@@ -1,0 +1,8 @@
+package com.itbank.model;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class Ex04DAO {
+
+}

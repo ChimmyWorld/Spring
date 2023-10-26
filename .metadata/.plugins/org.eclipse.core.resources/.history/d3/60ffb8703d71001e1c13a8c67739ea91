@@ -1,0 +1,34 @@
+package com.itbank.model;
+
+import java.sql.ResultSet;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+
+import com.itbank.model.DTO.AccountDTO;
+
+public class AccountDAO extends DAO{
+	
+	
+	public List<AccountDTO> selectAll() {
+		String sql = "select * from account";
+		
+		RowMapper<AccountDTO> rowMapper = (ResultSet rs, int rowNum) -> {
+				AccountDTO row = new AccountDTO();
+				
+				row.setDate(rs.getDate("date"));
+				row.setEmail(rs.getString("email"));
+				row.setIdx(rs.getInt("idx"));
+				row.setNick(rs.getString("nick"));
+				row.setUserid(rs.getString("userid"));
+				row.setUserpw(rs.getString("userpw"));
+				
+				return row;
+		};
+		
+		return jt.query(sql, rowMapper);
+	}
+
+}

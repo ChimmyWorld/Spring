@@ -1,0 +1,18 @@
+package com.itbank.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.itbank.model.BookDAO;
+import com.itbank.model.DTO.BookDTO;
+
+public class BookService {
+
+	@Autowired
+	private BookDAO dao;
+	
+	public List<BookDTO> getBooks() {
+		return dao.selectAll();
+	}
+}

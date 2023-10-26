@@ -1,0 +1,14 @@
+@charset "UTF-8";
+.menu {
+	list-style: none;
+	padding: 0;
+	display: flex;
+}
+
+.board {
+	border-collapse: collapse;
+}
+.board th, .board td {
+	border: 1px solid #aaaaaa;
+	padding: 5px 10px;
+}

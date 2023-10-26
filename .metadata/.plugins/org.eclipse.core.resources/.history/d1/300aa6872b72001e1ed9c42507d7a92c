@@ -1,0 +1,20 @@
+package com.itbank.model.dto;
+/*
+IDX       NOT NULL NUMBER        
+TITLE     NOT NULL VARCHAR2(300) 
+WRITER    NOT NULL VARCHAR2(100) 
+PUBLISHER NOT NULL VARCHAR2(100) 
+P_DATE             DATE          
+PRICE     NOT NULL NUMBER        
+ */
+
+import java.sql.Date;
+
+public class BookDTO {
+	private int idx, price;
+	private String title, writer;
+	private String publisher;
+	private Date p_date;
+	
+	
+}

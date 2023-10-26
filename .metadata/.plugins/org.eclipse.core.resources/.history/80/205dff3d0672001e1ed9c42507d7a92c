@@ -1,0 +1,54 @@
+package com.itbank.model.DTO;
+
+import java.util.Date;
+
+/*
+IDX       NOT NULL NUMBER        
+TITLE              VARCHAR2(100) 
+WRITER             VARCHAR2(100) 
+PUBLISHER          VARCHAR2(100) 
+P_DATE             DATE          
+PRICE              NUMBER    
+ */
+public class BookDTO {
+	int idx, price;
+	String title, writer, publisher;
+	Date p_date;
+	public int getIdx() {
+		return idx;
+	}
+	public void setIdx(int idx) {
+		this.idx = idx;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getWriter() {
+		return writer;
+	}
+	public void setWriter(String writer) {
+		this.writer = writer;
+	}
+	public String getPublisher() {
+		return publisher;
+	}
+	public void setPublisher(String publisher) {
+		this.publisher = publisher;
+	}
+	public Date getP_date() {
+		return p_date;
+	}
+	public void setP_date(Date p_date) {
+		this.p_date = p_date;
+	}
+	
+}

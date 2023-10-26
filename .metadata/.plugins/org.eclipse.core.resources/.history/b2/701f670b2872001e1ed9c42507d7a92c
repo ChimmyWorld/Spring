@@ -1,0 +1,6 @@
+package com.itbank.service;
+
+@Service
+public class BookService {
+	
+}

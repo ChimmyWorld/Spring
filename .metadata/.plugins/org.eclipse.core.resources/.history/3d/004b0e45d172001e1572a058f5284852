@@ -1,0 +1,9 @@
+package com.itbank.model;
+
+import org.apache.ibatis.annotations.Select;
+
+public interface BoardDAO {
+	@Select("select banner from v$version")
+	String test;
+
+}

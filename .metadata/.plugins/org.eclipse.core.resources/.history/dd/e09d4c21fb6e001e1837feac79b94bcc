@@ -1,0 +1,25 @@
+package com.itbank.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.itbank.service.Ex03Service;
+
+@Controller
+@RequestMapping("/ex03")
+public class Ex03Controller {
+	
+	private Ex03Service es = new Ex03Service();
+	
+	@GetMapping
+	public void ex03() {}
+	
+	@PostMapping()
+	public void ex03(String name, int score) {
+		System.out.println(es);
+		
+	}
+	
+}

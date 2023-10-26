@@ -1,0 +1,30 @@
+package com.itbank.model;
+
+import java.sql.ResultSet;
+import java.util.List;
+
+import org.springframework.jdbc.core.RowMapper;
+
+import com.itbank.model.DTO.BookDTO;
+
+public class BookDAO {
+	RowMapper<BookDTO> rowMapper = (ResultSet rs, int rowNum) -> {
+		BookDTO row = new BookDTO();
+		
+		row.setIdx(rs.getInt("idx"));
+		row.setP_date(rs.getDate("p_date"));
+		row.setPrice(rs.getInt("price"));
+		row.setPublisher(rs.getString("publisher"));
+		row.setTitle(rs.getString("title"));
+		row.setWriter(rs.getString("writer"));
+		
+		return row;
+	};
+	
+	public List<BookDTO> selectAll() {
+		String sql = "select * from book order by idx desc";
+		return jt.query(sql, rowMapper);
+		
+	}
+
+}

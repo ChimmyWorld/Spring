@@ -1,0 +1,18 @@
+package com.itbank.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.itbank.model.Ex04DAO;
+
+@Service
+public class Ex04Service {
+	
+	@Autowired
+	private Ex04DAO dao;
+	
+	public String test() {
+		return dao.banner();
+	}
+	
+}

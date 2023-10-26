@@ -1,0 +1,16 @@
+package com.itbank.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.itbank.model.BoardDAO;
+
+@Service
+public class BoardService {
+	@Autowired
+	BoardDAO dao;
+	
+	public String getVer() {
+		return dao.test();
+	}
+}

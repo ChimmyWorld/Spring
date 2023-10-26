@@ -1,0 +1,8 @@
+package com.itbank.model;
+
+public interface BookDAO {
+	
+	@Select("select banner from v$version")
+	String test();
+
+}

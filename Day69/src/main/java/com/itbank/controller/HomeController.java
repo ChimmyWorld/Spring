@@ -1,0 +1,27 @@
+package com.itbank.controller;
+
+import java.util.Date;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.itbank.service.AccountService;
+
+@Controller
+public class HomeController {
+	
+	@Autowired
+	private AccountService as;
+	
+	@GetMapping("/")
+	public String home(Model model) {
+		model.addAttribute("serverTime", new Date());
+		model.addAttribute("list", as.getAccounts());
+		model.addAttribute("ver", as.test());
+		
+		return "home";
+	}
+	
+}

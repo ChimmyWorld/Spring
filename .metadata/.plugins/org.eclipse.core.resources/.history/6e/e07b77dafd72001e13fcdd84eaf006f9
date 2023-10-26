@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file="header.jsp" %>
+
+	<ul>
+		<li>번호 : ${row.idx }</li>
+		<li>제목: ${row.title }</li>
+		<li>내용 : ${row.contents }</li>
+		<li>작성자: ${row.writer }</li>
+		<li>조회수 : ${row.view_count }</li>
+		<li>작성일 : ${row.write_date }</li>
+		
+	</ul>
+</body>
+</html>

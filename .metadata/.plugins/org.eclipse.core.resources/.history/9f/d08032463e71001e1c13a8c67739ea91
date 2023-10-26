@@ -1,0 +1,23 @@
+package com.itbank.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.itbank.service.AccountService;
+
+@Controller
+public class HomeController {
+	
+	@Autowired
+	private AccountService as;
+	
+	@GetMapping("/home")
+	public void home(Model model) {
+
+		model.addAttribute("ver", as.test());
+		model.addAttribute("list", as.getAccounts());
+	}
+	
+}

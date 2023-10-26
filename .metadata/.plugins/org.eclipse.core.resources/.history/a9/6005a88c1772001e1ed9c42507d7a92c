@@ -1,0 +1,11 @@
+package di;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class Ex02 {
+	public static void main(String[] args) {
+	
+		GenericXmlApplicationContext
+		
+	}
+}

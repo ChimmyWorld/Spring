@@ -1,0 +1,5 @@
+package com.itbank.model.dto;
+
+public class BookDTO {
+
+}

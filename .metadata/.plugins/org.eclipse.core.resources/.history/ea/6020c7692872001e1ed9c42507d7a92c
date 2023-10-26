@@ -1,0 +1,12 @@
+package com.itbank.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class BookService {
+
+	public Object getVer() {
+		return dao.test();
+	}
+	
+}

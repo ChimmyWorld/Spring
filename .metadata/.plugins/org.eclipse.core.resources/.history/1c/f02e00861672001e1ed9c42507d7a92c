@@ -1,0 +1,25 @@
+package di;
+
+import beans.Battery;
+import beans.Toy;
+
+public class Ex01 {
+	public static void main(String[] args) {
+		Battery bat = new Battery();
+		
+		Toy t1 = new Toy(); 	// 객체 하나 생성
+		t1.setBat(bat);
+		t1.run();
+		
+		Toy t2 = new Toy();		// 두번째 객체 생성
+		Toy t3 = t1;			// t1과 동일한 객체를 가리킴
+		
+		t2.run();
+		t3.run();
+		
+		// 해시코드가 같다면 동일한 데이터를 참조하고 있다는 의미
+		System.out.println("\nt1 = " + t1);
+		System.out.println("t2 = " + t2);
+		System.out.println("t3 = " +  t3);
+	}
+}
