@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<h1>${cpath } - Board</h1>
+<h1>${cpath } - 게시판</h1>
 
 <ul class="menu">
 	<li><a href="${cpath }">home</a></li>

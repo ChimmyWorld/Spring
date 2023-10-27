@@ -11,10 +11,21 @@
 }
 
 .board {
-	border-collapse: collapse;	
+	border-collapse: collapse;
+	font-size: 16px;	
 }
 
 .board th, .board td {
 	border: 1px solid #aaaaaa;
 	padding: 5px 10px;
+}
+
+.page {
+	display: flex;
+	justify-content: left;
+	list-style: none;
+	padding: 0;
+}
+.page > li {
+	margin: 0 10px;
 }

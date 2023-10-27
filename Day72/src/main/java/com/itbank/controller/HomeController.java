@@ -27,7 +27,9 @@ public class HomeController {
 	public ModelAndView view(int idx) {
 		ModelAndView mav = new ModelAndView();
 		
+		mav.addObject("view", bs.updateViewCount(idx));
 		mav.addObject("row", bs.getBoard(idx));
+		
 		mav.setViewName("view");
 		
 		return mav;

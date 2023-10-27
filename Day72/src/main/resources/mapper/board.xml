@@ -39,4 +39,11 @@
 		set title=#{title}, contents=#{contents} 
 		where idx=#{idx}
 	</update>
+	
+	<update id="countUp"
+			parameterType="int">
+		update board
+		set view_count = view_count + 1
+		where idx = #{idx}		
+	</update>
 </mapper>

@@ -16,6 +16,7 @@ public interface BoardDAO {
 	int delete(int idx);
 
 	int update(BoardDTO input);
-
+	
+	int countUp(int idx);
 	
 }

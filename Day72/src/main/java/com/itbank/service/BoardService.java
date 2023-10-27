@@ -35,7 +35,9 @@ public class BoardService {
 
 	public int updateBoard(BoardDTO input) {
 		return dao.update(input);
-		
 	}
-
+	
+	public int updateViewCount(int idx) {
+		return dao.countUp(idx);
+	}
 }
