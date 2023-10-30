@@ -10,16 +10,18 @@ import org.springframework.stereotype.Service;
 import com.itbank.components.Paging;
 import com.itbank.model.BoardDAO;
 import com.itbank.model.dto.BoardDTO;
+import com.itbank.model.dto.ReplyDTO;
 
 @Service
 public class BoardService {
 	@Autowired
 	private BoardDAO dao;
-	
+
 	public String getVer() {
 		return dao.test();
 	}
 	
+	//게시글 관련
 	public Map<String, Object> getBoards(Integer idx) {
 		idx = idx == null ? 1 : idx;
 		
@@ -55,4 +57,5 @@ public class BoardService {
 	public int updateViewCount(int idx) {
 		return dao.countUp(idx);
 	}
+	
 }

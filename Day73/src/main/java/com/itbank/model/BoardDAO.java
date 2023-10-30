@@ -9,7 +9,7 @@ import com.itbank.model.dto.BoardDTO;
 
 public interface BoardDAO {
 	String test();
-
+	
 	@Select("select count(*) from board")
 	int totalBoard();
 
@@ -26,7 +26,7 @@ public interface BoardDAO {
 	int update(BoardDTO input);
 	
 	int countUp(int idx);
-
-
+	
+	
 	
 }

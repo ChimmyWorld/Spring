@@ -12,13 +12,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.itbank.model.dto.BoardDTO;
+import com.itbank.model.dto.ReplyDTO;
 import com.itbank.service.BoardService;
+import com.itbank.service.ReplyService;
 
 @Controller
 @RequestMapping("/board")
 public class BoardController {
 
 	@Autowired private BoardService bs;
+	@Autowired private ReplyService rs;
 	
 	@GetMapping("/view")
 	public ModelAndView view(int idx) {
@@ -26,6 +29,18 @@ public class BoardController {
 		
 		mav.addObject("view", bs.updateViewCount(idx));
 		mav.addObject("row", bs.getBoard(idx));
+		mav.addObject("replys", rs.getReplys(idx));
+		mav.addObject("reply", rs.countReply(idx));
+		
+		return mav;
+	}
+	
+	@PostMapping("/view")
+	public ModelAndView view(ReplyDTO input) {
+		ModelAndView mav = new ModelAndView("msg");
+		
+		mav.addObject("row", rs.addReply(input));
+		mav.addObject("message", "작성 완료");
 		
 		return mav;
 	}

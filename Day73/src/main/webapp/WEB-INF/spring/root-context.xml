@@ -24,6 +24,7 @@
 		<property name="mapperLocations">
 			<list>
 				<value>classpath:mapper/board.xml</value>
+				<value>classpath:mapper/reply.xml</value>
 			</list>
 			<!--  지정 위치에 파일이 없으면 스프링 빈 생성시 에러 발생  -->
 		</property>

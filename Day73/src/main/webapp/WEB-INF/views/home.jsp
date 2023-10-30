@@ -3,6 +3,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="header.jsp" %>
 
+<h4>총 게시글 수 : ${p.totalBoard }개</h4>
+
 <section class="board">
 	<table>
 		<tr>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itbank.model.ReplyDAO">
+	<select id="selectReplyAll"
+			parameterType="int"
+			resultType="com.itbank.model.dto.ReplyDTO">
+		select * from reply
+			where board_idx = #{idx}
+	</select>
+	
+	<insert id="insertReply"
+			parameterType="com.itbank.model.dto.ReplyDTO">
+		insert into reply values (default, #{idx}, #{contents}, #{writer}, default )
+	</insert>
+	
+	<select id="countOne"
+			resultType="int"
+			parameterType="int">
+			select count(*) from reply where board_idx = #{idx}
+	</select>
+</mapper>
