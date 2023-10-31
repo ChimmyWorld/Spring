@@ -9,6 +9,9 @@ public class Ex01 {
 	// - 반환형은 항상 void로 지정
 	@Test
 	public void test1() {
+		System.out.println(10/ 0);
+		
+		System.out.println(this);
 		System.out.println("1. hello");
 	}
 	
@@ -17,6 +20,7 @@ public class Ex01 {
 	// - 다른 테스트에 영향을 주지 않기 위함 
 	@Test
 	public void test2() {
+		System.out.println(this);
 		System.out.println("2. 두번째 메서드 ");
 	}
 	
