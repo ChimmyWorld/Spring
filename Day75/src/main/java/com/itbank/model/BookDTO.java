@@ -71,6 +71,10 @@ public class BookDTO {
 			return false;
 		return true;
 	}
-	
-	
+	@Override
+	public String toString() {
+		return "BookDTO [idx=" + idx + ", price=" + price + ", title=" + title + ", writer=" + writer + ", publisher="
+				+ publisher + ", p_date=" + p_date + "]";
+	}
+
 }

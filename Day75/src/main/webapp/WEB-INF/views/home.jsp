@@ -1,15 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>home.jsp</title>
-</head>
-<body>
-	<h1>Test 실습</h1>
-	<hr>
-	
+<%@ include file="header.jsp" %>
+
 	<ol>
 		<li>/로 요청시 처리할 Controller를 작성</li>
 		<li>View는 home.jsp를 사용</li>
@@ -19,10 +11,7 @@
 	<hr>
 	
 	<h1>로또 번호</h1>
-	${lotto }
-	<hr>
-	
-	<h1>버전</h1>
-	${ver }
+	<h5>${lotto }</h5>
+	<h5>${ver }</h5>
 </body>
 </html>

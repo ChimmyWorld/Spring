@@ -25,6 +25,11 @@
 	
 	<bean id="ssf" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="hds"/>
+		<property name="mapperLocations">
+			<list>
+				<value>classpath:mapper/book.xml</value>
+			</list>
+		</property>
 	</bean>
 	
 	<bean id="sst" class="org.mybatis.spring.SqlSessionTemplate">
