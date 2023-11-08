@@ -31,7 +31,7 @@ public class AccountController {
 	
 	@PostMapping("/login")
 	public String login(AccountDTO input, HttpSession session) {
-		as.login(input);
+		input = as.login(input);
 		
 		if(input != null) {
 			session.setAttribute("user", input);
