@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Select;
 
 import com.itbank.component.Paging;
 import com.itbank.model.vo.BoardVO;
+import com.itbank.model.vo.ReplyVO;
 
 public interface BoardDAO {
 	@Select("select count(*) from board")
@@ -33,4 +34,8 @@ public interface BoardDAO {
 			+ "order by idx desc "
 			+ "fetch first ROW only")
 	int selectLast();
+
+	@Select("select * from reply where board_idx = #{idx} "
+			+ "order by idx desc")
+	List<ReplyVO> selectReply(int idx);
 }

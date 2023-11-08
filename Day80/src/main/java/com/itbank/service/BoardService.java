@@ -42,8 +42,14 @@ public class BoardService {
 	}
 
 	@Transactional(readOnly = true)
-	public BoardVO getBoard(int idx) {
-		return dao.selectOne(idx);
+	public Map<String, Object> getBoard(int idx) {
+		
+		Map<String, Object> result = new HashMap<>();
+		
+		result.put("row", dao.selectOne(idx));
+		result.put("rps", dao.selectReply(idx));
+		
+		return result;
 	}
 	
 	@Transactional
@@ -53,7 +59,7 @@ public class BoardService {
 		
 		if (row != 0) {
 			int idx = dao.selectLast();
-			System.out.println("idx = " + idx);
+			//System.out.println("idx = " + idx);
 			
 			path += "view/" + idx;
 		}

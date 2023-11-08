@@ -1,5 +1,7 @@
 package com.itbank.controller;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,8 +22,10 @@ public class BoardController {
 	@GetMapping("/view/{idx}")
 	public ModelAndView view(@PathVariable int idx) {
 		ModelAndView mav = new ModelAndView();
+		Map<String, Object> result = bs.getBoard(idx);
 		
-		mav.addObject("row", bs.getBoard(idx));
+		mav.addObject("row", result.get("row"));
+		mav.addObject("rps", result.get("rps"));
 		mav.setViewName("board/view");
 		
 		return mav;

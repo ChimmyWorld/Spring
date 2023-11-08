@@ -17,6 +17,16 @@
 			<td><pre>${row.contents }</pre></td>
 		</tr>
 	</table>
+	
+	<hr>
+	
+	<c:forEach var="rp" items="${rps }">
+	<fieldset class="reply">
+		<legend>${rp.writer } | ${rp.write_date }</legend>
+		
+		<p>${rp.contents }</p>
+	</fieldset>
+	</c:forEach>
 
 </body>
 </html>

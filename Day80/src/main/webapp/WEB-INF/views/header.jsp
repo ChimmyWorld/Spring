@@ -11,4 +11,25 @@
 </head>
 <body>
 	<h1>${cpath } - Transaction</h1>
+	
+	<h4>현재 로그인 : ${user.nick }</h4>
 	<hr>
+	
+	<ul class="page">
+		<li><a href="${cpath }">home</a></li>
+		
+		<c:if test="${empty user }">
+			<li><a href="${cpath }/account/signUp">signUp</a></li>
+			<li><a href="${cpath }/account/login">login</a></li>
+		</c:if>
+		<c:if test="${not empty user }">
+			<li><a href="${cpath }/account/myPage">${user.nick }</a></li>
+			<li><a href="${cpath }/account/logout">logout</a></li>
+		</c:if>
+	</ul>
+	
+	<hr>
+	
+	
+	
+		
