@@ -9,12 +9,15 @@
 <body>
 	<h1>Logging Framework</h1>
 	<hr>
-	
+	${ver }
 	<ul>
-		<li>slf4j</li>
+		<li>slf4j </li>
 		<li>log4j</li>
 		<li>logback</li>
 	</ul>
+	
+	
+	
 	
 </body>
 </html>
