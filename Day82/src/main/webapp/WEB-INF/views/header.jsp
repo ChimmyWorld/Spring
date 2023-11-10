@@ -7,12 +7,13 @@
 <head>
 <meta charset="UTF-8">
 <title>${cpath }</title>
+<link href="${cpath }/resources/css/style.css" rel="stylesheet">
 </head>
 <body>
 	<h1>File</h1>
 	<hr>
 	
-	<ul>
+	<ul class="menu">
 		<li><a href="${cpath }">home</a></li>
 		<li><a href="${cpath }/ex01">ex01</a></li>
 		<li><a href="${cpath }/ex02">ex02</a></li>
