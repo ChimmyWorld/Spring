@@ -11,11 +11,15 @@ IMG                 VARCHAR2(300)
 
 import java.sql.Date;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class BoardVO {
-	int idx, view_count;
-	String title, contents;
-	String writer, img;
-	Date write_date;
+	private int idx, view_count;
+	private String title, contents;
+	private String writer, img;
+	private Date write_date;
+	
+	private MultipartFile upload;
 	
 	public int getIdx() {
 		return idx;
@@ -59,5 +63,12 @@ public class BoardVO {
 	public void setWrite_date(Date write_date) {
 		this.write_date = write_date;
 	}
+	public MultipartFile getUpload() {
+		return upload;
+	}
+	public void setUpload(MultipartFile upload) {
+		this.upload = upload;
+	}
 
+	
 }

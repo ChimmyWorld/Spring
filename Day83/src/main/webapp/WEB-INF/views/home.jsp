@@ -1,42 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ include file="header.jsp" %>
+	pageEncoding="UTF-8"%>
+<%@ include file="header.jsp"%>
 
-	<table>
-		<tr>
-			<th>IDX</th>
-			<th>제목</th>
-			<th>작성자</th>
-			<th>작성일</th>
-			<th>조회수</th>
-			<th>수정</th>
-			<th>삭제</th>
-		</tr>
-		<c:forEach var="row" items="${list }">
-		<tr>
-			<td>${row.idx }</td>
-			<td>
-			<a href="${cpath }/board/view/${row.idx}">
-			${row.title }</a>
-			</td>
-			<td>${row.writer }</td>
-			<td>${row.write_date }</td>
-			<td>${row.view_count }</td>
-			<td>
-			<a href="${cpath }/board/update/${row.idx}">
-			 수정</a>
-			 </td>
-			<td>
-			<a href="${cpath }/board/delete/${row.idx}">
-			 삭제</a>
-			 </td>
-		</tr>
-		</c:forEach>
-	</table>
-	
-	<a href="${cpath }/board/write">
-		<button>작성</button>
-	</a>
-
+	<main>
+		<section class="board">
+			<c:forEach var="row" items="${list }">
+				<div>
+					<a href="${cpath }/board/view/${row.idx }">
+						<img src="${cpath }/img/${row.idx}/${row.img}" width="150px" height="100px"><br>
+					</a>
+					<hr>
+					${row.title } (${row.writer })
+					<hr>
+					${row.view_count } ${row.write_date }
+				</div>
+			</c:forEach>
+		</section>
+		
+		<a href="${cpath }/board/write">
+			<button>작성</button>
+		</a>
+	</main>
 </body>
 </html>

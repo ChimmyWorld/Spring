@@ -1,5 +1,7 @@
 package com.itbank.controller;
 
+import java.io.IOException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +25,7 @@ public class BoardController {
 	}
 	
 	@PostMapping("/write")
-	public String write(BoardVO input) {
+	public String write(BoardVO input) throws IOException {
 		bs.addBoard(input);
 		
 		return "redirect:/";
@@ -39,7 +41,7 @@ public class BoardController {
 	}
 	
 	@GetMapping("/delete/{idx}")
-	public String delete(@PathVariable int idx) {
+	public String delete(@PathVariable int idx) throws IOException {
 		bs.deleteBoard(idx);
 		
 		return "redirect:/";
@@ -55,10 +57,9 @@ public class BoardController {
 	}
 	
 	@PostMapping("/update/{idx}")
-	public String update(BoardVO input) {
-		
+	public String update(BoardVO input) throws IOException {
 		bs.updateBoard(input);
 		
-		return "redirect:/";
+		return "redirect:/board/view/" + input.getIdx();
 	}
 }

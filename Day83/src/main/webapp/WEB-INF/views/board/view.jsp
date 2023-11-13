@@ -2,21 +2,34 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
 
-<table>
-	<tr>
-		<th>제목 | ${row.title }</th>
-		<th>작성자 | ${row.writer }</th>
-	</tr>
-	<tr>
-		<th>조회수 | ${row.view_count }</th>
-		<th>작성일 | ${row.write_date }</th>
-	</tr>
-	<tr>
-		<td>
-		<pre>${row.contents }</pre>
-		</td>
-	</tr>
-</table>
+<section>
+	<table>
+		<tr>
+			<th>${row.title } | ${row.idx }</th>
+		</tr>
+		<tr>
+			<th>${row.writer } | 
+				${row.view_count } 
+				${row.write_date }
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<p><img src="${cpath }/img/${row.idx}/${row.img }" width="800px"></p>
+				<pre>${row.contents }</pre>				
+			</td>
+		</tr>
+	</table>
+	
+	<br>
+	
+	<a href="${cpath }/board/delete/${row.idx}">
+		<button>삭제</button>
+	</a>
+	<a href="${cpath }/board/update/${row.idx}">
+		<button>수정</button>
+	</a>
+</section>
 
 </body>
 </html>
