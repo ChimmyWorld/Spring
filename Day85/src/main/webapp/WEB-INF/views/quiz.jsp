@@ -6,10 +6,20 @@
 	<h4>Board 테이블 - REST</h4>
 	
 	<table class="board">
-		
+		<thead>
+			<tr>
+				<th>IDX</th>
+				<th>제목</th>
+				<th>작성자</th>
+				<th>조회수</th>
+				<th>작성일</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
 	</table>
 	
-	<p>
+	<p class="btns">
 		<button>GET</button>
 		<button>POST</button>
 		<button>PUT</button>
@@ -18,5 +28,6 @@
 	</p>
 </section>
 
+<script src="${cpath }/resources/js/board.js"></script>
 </body>
 </html>

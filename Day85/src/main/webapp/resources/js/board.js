@@ -17,7 +17,6 @@ const url = 'board';
 				tr.innerHTML = 
 					'<td>' + data[i].idx + '</td>' +	
 					'<td>' + data[i].title + '</td>' +	
-					'<td>' + data[i].contents + '</td>' +	
 					'<td>' + data[i].writer + '</td>' +	
 					'<td>' + data[i].view_count + '</td>' +	
 					'<td>' + data[i].write_date + '</td>';

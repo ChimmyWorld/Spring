@@ -10,9 +10,13 @@ WRITE_DATE          DATE
 
 import java.sql.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 public class BoardVO {
 	private int idx, view_count;
 	private String title, contents, writer;
+	
+	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "ko-kr")
 	private Date write_date;
 	
 	public int getIdx() {
