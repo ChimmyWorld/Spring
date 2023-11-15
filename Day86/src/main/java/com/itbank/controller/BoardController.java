@@ -23,12 +23,13 @@ public class BoardController {
 	private BoardService bs;
 	
 	@GetMapping
-	public List<BoardVO> getBoards(){
-		return bs.getBoards();
+	public List<BoardVO> getBoards(int reqPage){
+		System.out.println("reqPage = " + reqPage);
+		return bs.getBoards(reqPage);
 	}
 	
 	@PostMapping
-	public int addBoard(@RequestBody BoardVO input) {
+	public int addBoard(@RequestBody(required = false) BoardVO input) {
 		return bs.addBoard(input);
 	}
 	
@@ -45,5 +46,10 @@ public class BoardController {
 	@DeleteMapping("/{idx}")
 	public int deleteBoard(@PathVariable int idx) {
 		return bs.deleteBoard(idx);
+	}
+	
+	@GetMapping("/{idx}")
+	public BoardVO getBoard(@PathVariable int idx) {
+		return bs.getBoard(idx);
 	}
 }

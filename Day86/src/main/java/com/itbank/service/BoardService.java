@@ -13,7 +13,9 @@ public class BoardService {
 	@Autowired
 	private BoardDAO dao;
 	
-	public List<BoardVO> getBoards() {
+	public List<BoardVO> getBoards(int reqPage) {
+		// 여기에 페이징 코드를 마저 작성
+		
 		
 		return dao.selectAll();
 	}
@@ -32,6 +34,10 @@ public class BoardService {
 
 	public int deleteBoard(int idx) {
 		return dao.delete(idx);
+	}
+
+	public BoardVO getBoard(int idx) {
+		return dao.selectOne(idx);
 	}
 
 

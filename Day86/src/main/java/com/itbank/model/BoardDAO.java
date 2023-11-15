@@ -17,4 +17,7 @@ public interface BoardDAO {
 	int updateTitle(BoardVO input);
 
 	int delete(int idx);
+	
+	@Select("select * from board where idx = #{idx}")
+	BoardVO selectOne(int idx);
 }
