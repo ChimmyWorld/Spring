@@ -32,11 +32,5 @@
 		</c:forEach>
 	</table>
 	
-	<ul class="page">
-		<c:forEach var="i" begin="1" end="10">
-		<li><a href="${cpath }?page=${i }">${i }</a></li>
-		</c:forEach>
-	</ul>
-	
 </body>
 </html>
